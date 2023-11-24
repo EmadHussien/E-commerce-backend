@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,900;1,900&amp;display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Urbanist,sans-serif;
+    font-size: 2.5rem;
+}
+
+body {
+    min-height: 100vh;
+    background-color: white;
+    color: teal;
+    display: grid;
+    place-content: center;
+    padding: 1rem;
+}

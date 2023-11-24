@@ -1,0 +1,4 @@
+20230919	14:59:09	bcdaf6d7-a26b-414b-bc7a-05a4a8d82306	Error: ENOENT: no such file or directory, stat 'E:\Node JS Course\E-Commerce-Backend\ciews\404.html'	GET	/ss	undefined
+20231016	15:47:48	a2a572da-9f3a-413e-be7c-e197ce8aefee	Error: Cannot set headers after they are sent to the client	POST	/api/user	undefined
+20231106	03:52:40	c900db6a-fa34-472e-b003-9abd1a7e61fe	TypeError: Cannot read properties of undefined (reading 'isAdmin')	GET	/products?category=men	undefined
+20231106	03:53:07	a9e7895a-c080-4b40-8133-710bb4a20783	TypeError: Cannot read properties of undefined (reading 'isAdmin')	GET	/products?category=men	undefined
