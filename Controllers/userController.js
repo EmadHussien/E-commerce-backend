@@ -42,7 +42,7 @@ const getAllUsers = async (req, res) => {
   const query = req.query.new;
   try {
     const users = query
-      ? await User.find().sort({ _id: -1 }).limit(5)
+      ? await User.find().sort({ _id: -1 }).limit(7)
       : await User.find();
 
     if (!users) return res.status(204).send({ message: "No users found." });
