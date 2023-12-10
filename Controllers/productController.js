@@ -91,7 +91,7 @@ const deleteProduct = async (req, res) => {
         .json({ message: `No Product matches this ID ${req.body.id}.` });
     }
     res.status(200).json({
-      success: `Product with id: ${deletedProduct._id} has been deleted successfully`,
+      success: deletedProduct._id,
     });
   } catch (e) {
     res.status(500).json(e);

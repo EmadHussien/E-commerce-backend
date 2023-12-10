@@ -7,8 +7,9 @@ const pay = async (req, res) => {
     products: req.body.products,
     amount: req.body.amount / 100,
     address: req.body.address,
+    username: req.body.username,
+    userImg: req.body.img,
   };
-
   try {
     // Create a payment using Stripe
     const stripeRes = await stripe.charges.create({

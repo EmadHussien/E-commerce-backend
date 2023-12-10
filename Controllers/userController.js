@@ -96,7 +96,7 @@ const deleteUser = async (req, res) => {
         .json({ message: `No User matches this ID ${req.body.id}.` });
     }
     res.status(200).json({
-      success: `user with id: ${deletedUser._id} and username: ${deletedUser.username} has been deleted successfully`,
+      success: deletedUser._id,
     });
   } catch (e) {
     res.status(500).json(e);

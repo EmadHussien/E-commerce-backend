@@ -92,13 +92,21 @@ const getAllOrders = async (req, res) => {
 };
 
 const getOrderStats = async (req, res) => {
+  const productID = req.query.productId;
   const date = new Date();
   const lastMonth = new Date(new Date().setMonth(date.getMonth() - 1));
   const previousMonth = new Date(new Date().setMonth(lastMonth.getMonth() - 1));
 
   try {
     const income = await Order.aggregate([
-      { $match: { createdAt: { $gte: previousMonth } } },
+      {
+        $match: {
+          createdAt: { $gte: previousMonth },
+          ...(productID && {
+            products: { $elemMatch: { productID } },
+          }),
+        },
+      },
       {
         $project: {
           month: { $month: "$createdAt" },
@@ -121,7 +129,7 @@ const getOrderStats = async (req, res) => {
 
     res.status(200).json(formattedData);
   } catch (err) {
-    res.status(500).json(e);
+    res.status(500).json(err);
   }
 };
 

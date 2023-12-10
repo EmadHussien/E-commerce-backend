@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 const Cart = require("../Models/Cart");
 
 const handleNewUser = async (req, res) => {
-  const { username, email, password } = req.body;
+  const { username, email, password, img } = req.body;
   if (!username || !email || !password) {
     return res
       .status(400)
@@ -20,6 +20,7 @@ const handleNewUser = async (req, res) => {
       username: username,
       email: email,
       password: hashedPwd,
+      img: img || "",
     });
 
     // Create an empty cart for the new user

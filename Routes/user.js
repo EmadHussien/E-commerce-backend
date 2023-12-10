@@ -9,6 +9,6 @@ router
   .route("/:id")
   .get(userController.getSingleUser)
   .put(userController.updateUser)
-  .delete(userController.deleteUser);
+  .delete(verifyRoles(), userController.deleteUser);
 
 module.exports = router;
