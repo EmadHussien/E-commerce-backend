@@ -1,6 +1,6 @@
-# E-commerce-backend
+# E-commerce backend Node Application
 
-### Project Overview
+## Project Overview
 
 Welcome to the E&H E-Commerce platform! This FullStack application is designed to provide a comprehensive and secure online shopping experience. From user authentication to seamless payment processing, this platform encompasses a wide range of features for both users and administrators.
 
@@ -20,7 +20,7 @@ Welcome to the E&H E-Commerce platform! This FullStack application is designed t
 - GitHub for source code management
 - Vercel for deployment
 
-### Key Features:
+## Key Features:
 
 #### User Authentication:
 
@@ -91,7 +91,7 @@ Welcome to the E&H E-Commerce platform! This FullStack application is designed t
 - Passwords are encrypted using bcrypt for enhanced security.
   - Implement bcrypt for secure password storage.
 
-### Project Structure:
+## Project Structure:
 
 - **/E-commerce-backend**
 
@@ -136,17 +136,17 @@ npm start
 
 Ensure MongoDB is running with your environment . The backend will be available at http://localhost:5000.
 
-### API Endpoints:
+# API Endpoints:-
 
-### User related Endpoints:
+## User related Endpoints:
 
-- ### Register a New User
+### (-) Register a New User
 
-### Endpoint
+#### Endpoint
 
 - **POST** `baseURL/users/register`
 
-### Request
+#### Request
 
 - **Body**: JSON object with user details.
 
@@ -158,7 +158,7 @@ Ensure MongoDB is running with your environment . The backend will be available 
   }
   ```
 
-### Response
+#### Response
 
 Status Code: 201 Created
 
@@ -177,13 +177,13 @@ Body:
 }
 ```
 
-- ### User Login
+### (-) User Login
 
-### Endpoint
+#### Endpoint
 
 - **POST** `baseURL/auth/login`
 
-### Request
+#### Request
 
 - **Body**: JSON object with user details.
 
@@ -194,7 +194,7 @@ Body:
   }
   ```
 
-### Response
+#### Response
 
 Status Code: 200 OK
 
@@ -214,17 +214,17 @@ Body:
 }
 ```
 
-- ### Refresh Token
+### (-) Refresh Token
 
-### Endpoint
+#### Endpoint
 
 - **GET** `baseURL/refresh`
 
-### Request
+#### Request
 
 - **Body**: No Body just http only cookie sent automatically by browser
 
-### Response
+#### Response
 
 Status Code: 200 OK
 
@@ -236,31 +236,31 @@ Body:
 }
 ```
 
-- ### Log Out
+### (-) Log Out
 
-### Endpoint
+#### Endpoint
 
 - **POST** `baseURL/logout`
 
-### Request
+#### Request
 
 - **Body**: No Body just http only cookie sent automatically by browser
 
-### Response
+#### Response
 
-Status Code: 204 No Content
+<p> Status Code: 204 No Content </p>
 
-- ### Get All Users
+### (-) Get All Users
 
-### Endpoint
+#### Endpoint
 
 - **GET** `baseURL/users`
 
-### Request
+#### Request
 
 - **Auth**: Admin Token.
 
-### Response
+#### Response
 
 Status Code: 200 OK
 
@@ -301,17 +301,17 @@ Body:
 ]
 ```
 
-- ### Get Latest 8 Users
+### (-) Get Latest 8 Users
 
-### Endpoint
+#### Endpoint
 
 - **GET** `baseURL/users?new=true`
 
-### Request
+#### Request
 
 - **Auth**: Admin Token.
 
-### Response
+#### Response
 
 Status Code: 200 OK
 
@@ -404,17 +404,17 @@ Body:
 ]
 ```
 
-- ### Get User Registeration Stats over the year
+### (-) Get User Registeration Stats over the year
 
-### Endpoint
+#### Endpoint
 
 - **GET** `baseURL/users/stats`
 
-### Request
+#### Request
 
 - **Auth**: Admin Token.
 
-### Response
+#### Response
 
 Status Code: 200 OK
 
@@ -429,15 +429,15 @@ Body:
 ]
 ```
 
-### Product related Endpoints:
+## Product related Endpoints:
 
-- ### Create New Product
+### (-) Create New Product
 
-### Endpoint
+#### Endpoint
 
 - **POST** `baseURL/products`
 
-### Request
+#### Request
 
 - **Body**: JSON object with Product details and Auth including Token.
 
@@ -453,7 +453,7 @@ Body:
   }
   ```
 
-### Response
+#### Response
 
 Status Code: 201 Created
 
@@ -476,17 +476,17 @@ Body:
 }
 ```
 
-- ### Get All Products
+### (-) Get All Products
 
-### Endpoint
+#### Endpoint
 
 - **GET** `baseURL/products`
 
-### Request
+#### Request
 
 - **Auth**: Token.
 
-### Response
+#### Response
 
 Status Code: 200 OK
 
@@ -539,17 +539,17 @@ Body:
 ]
 ```
 
-- ### Delete Product
+### (-) Delete Product
 
-### Endpoint
+#### Endpoint
 
 - **DELETE** `baseURL/products/productID`
 
-### Request
+#### Request
 
 - **Auth**: Token.
 
-### Response
+#### Response
 
 Status Code: 200 OK
 
@@ -561,17 +561,17 @@ Body:
 }
 ```
 
-- ### Get Single Product
+### (-) Get Single Product
 
-### Endpoint
+#### Endpoint
 
 - **GET** `baseURL/products/productID`
 
-### Request
+#### Request
 
 - **Auth**: Token.
 
-### Response
+#### Response
 
 Status Code: 200 OK
 
@@ -594,13 +594,13 @@ Body:
 }
 ```
 
-- ### Update Product
+### (-) Update Product
 
-### Endpoint
+#### Endpoint
 
 - **PUT** `baseURL/products/productID`
 
-### Request
+#### Request
 
 - **Body**: JSON object with Product update fields and auth token.
 
@@ -610,7 +610,7 @@ Body:
   }
   ```
 
-### Response
+#### Response
 
 Status Code: 200 OK
 
@@ -633,17 +633,17 @@ Body:
 }
 ```
 
-- ### Get Products by Category
+### (-) Get Products by Category
 
-### Endpoint
+#### Endpoint
 
 - **GET** `baseURL/products?category=shirts`
 
-### Request
+#### Request
 
 - **Body**: No Body Netheir Token.
 
-### Response
+#### Response
 
 Status Code: 200 OK
 
@@ -682,19 +682,19 @@ Body:
 ]
 ```
 
-### Cart related Endpoints:
+## Cart related Endpoints:
 
-- ### Get User Cart
+### (-) Get User Cart
 
-### Endpoint
+#### Endpoint
 
 - **GET** `baseURL/carts/userID`
 
-### Request
+#### Request
 
 - **Auth**: Need Token.
 
-### Response
+#### Response
 
 Status Code: 200 OK
 
@@ -727,13 +727,13 @@ Body:
 }
 ```
 
-- ### Update Cart
+### (-) Update Cart
 
-### Endpoint
+#### Endpoint
 
 - **PUT** `baseURL/carts/cartID`
 
-### Request
+#### Request
 
 - **Body**: JSON object with cart update fields and auth token.
 
@@ -743,7 +743,7 @@ Body:
   }
   ```
 
-### Response
+#### Response
 
 Status Code: 200 OK
 
@@ -760,19 +760,19 @@ Body:
 }
 ```
 
-### Order related Endpoints:
+## Order related Endpoints:
 
-- ### Get All Orders
+### (-) Get All Orders
 
-### Endpoint
+#### Endpoint
 
 - **GET** `baseURL/orders`
 
-### Request
+#### Request
 
 - **Auth**: Need Token.
 
-### Response
+#### Response
 
 Status Code: 200 OK
 
@@ -854,17 +854,17 @@ Body:
 ]
 ```
 
-- ### Get Product's last month sales Stats
+### (-) Get Product's last month sales Stats
 
-### Endpoint
+#### Endpoint
 
 - **GET** `baseURL/orders/income?productId={productID}`
 
-### Request
+#### Request
 
 - **Auth**: Need Token.
 
-### Response
+#### Response
 
 Status Code: 200 OK
 
@@ -879,17 +879,17 @@ Body:
 ]
 ```
 
-- ### Get Income for the last 3 months
+### (-) Get Income for the last 3 months
 
-### Endpoint
+#### Endpoint
 
 - **GET** `baseURL/orders/income`
 
-### Request
+#### Request
 
 - **Auth**: Need Token.
 
-### Response
+#### Response
 
 Status Code: 200 OK
 
